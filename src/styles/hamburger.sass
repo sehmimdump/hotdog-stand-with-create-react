@@ -1,0 +1,87 @@
+@mixin hovering-nav
+    transition: all .3s ease-out
+    &:hover
+        text-shadow: 10px 10px 30px rgba(150, 150, 150, .5)
+        transform: rotate(-90deg)
+        background-color: white
+
+.navigation
+    &_header
+        font-size: 20px
+        font-weight: 200
+        padding: 25px
+        transition: all .3s ease-out
+        text-shadow: 10px 10px 30px rgba(150, 150, 150, 1)
+        &:hover
+            font-size: 25px
+    &_checkbox
+        display: none
+    &_button
+        height: 3.5rem
+        width: 3.5rem
+        border-radius: 50%
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,242,241,1) 18%, rgba(255,242,241,1) 22%)
+        position: fixed
+        right: 115px
+        top: 25px
+        z-index: 200
+        box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1)
+
+    &_background
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        position: fixed
+        right: 120px
+        top: 30px
+        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(241,241,255,1) 9%, rgba(241,241,255,1) 18%)
+        z-index: 100
+
+        transition: transform .5s
+
+        // transform: scale(15)
+
+    &_nav
+        height: 100vh
+        z-index: 150
+        opacity: 0
+        width: 0
+        transition: all .15s
+
+
+    &_list
+        perspective: 150rem
+        position: fixed
+        top: 40%
+        left: 87%
+        transform: translate(-50%, -50%)
+        z-index: 200
+    &_item
+        margin: 3.5rem
+        padding: .5rem
+        @include hovering-nav
+
+    &_link
+        
+        text-transform: uppercase
+        font-size: 30px
+        font-weight: 200px
+        padding-bottom: 80px 
+
+    &_checkbox:checked ~ &_background
+        transform: scale(17.5)
+    &_checkbox:checked ~ &_nav
+        opacity: 1
+        width: 100%
+.ham
+
+    height: 3.25rem
+    width: 3.25rem
+    position: fixed
+    right: 116px
+    top: 27px
+    transition: all 10s ease
+    &:hover
+        transform: rotate(720deg)
+
+

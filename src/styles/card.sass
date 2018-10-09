@@ -1,0 +1,47 @@
+.card
+    display: flex
+    flex-wrap: wrap
+    perspective: 100rem
+
+    &_side
+        padding: 0px
+        justify-content: space-between
+        transition: all 1s ease
+        &--front
+            opacity: 1
+        &--back
+            padding: 20px
+            border-radius: 10px
+            max-width: 350px
+            position: absolute
+            top: 95px
+            left: 20%
+            opacity: 0
+            transform: rotateY(180deg)
+
+    &:hover &_side--front
+        transform: rotateY(180deg)
+        opacity: .1
+    &:hover &_side--back
+        transform: rotateY(0deg)
+        opacity: 1
+
+
+
+    &-img
+        padding: 60px
+        height: 250px
+        width: 600px
+
+
+.header-item
+    padding: 0px
+    margin: 0px
+
+
+
+
+
+
+
+

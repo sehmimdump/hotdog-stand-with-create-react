@@ -1,0 +1,65 @@
+@import 'mixins'
+
+    
+    
+.menu-container
+    padding: 0
+
+
+.menu-header
+    font-weight: 100
+    padding: 0px
+    margin: 30px
+    font-size: 120px
+    transition: all .5s ease
+    &:hover
+        text-shadow: 10px 10px 30px rgba(150, 150, 150, 1)
+        color:  rgba(255,0,132,.8)
+        transform: rotateX(20deg)
+        background: rgba(244, 58, 58, .09)
+
+
+.item
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    
+    &-each
+        border-radius: 5%
+        transition: all 1s ease
+        background: rgba(244, 58, 58, .90)
+        padding: 0px
+        margin: 10px
+        &-front
+            background-color: rgb(244, 58, 58)
+            padding: 0px
+            justify-content: space-between
+            z-index: 10
+            &-title
+                color: white
+                text-transform: uppercase
+                font-weight: 100px
+                padding: 40px 0px 0px 0px
+            &-price
+                color: white
+                padding: 0
+            &-img
+                padding: 0px
+                width: 365px
+                height: 30vh
+        
+        &-back
+            position: relative
+            &-body
+                opacity: 0
+                z-index: 0
+                position: absolute
+                bottom: -330px
+                line-height: 35px
+                color: white
+        &:hover &-front
+            transform: translateY(-150px)
+            opacity: 1
+        &:hover &-back-body
+            opacity: 1
+
