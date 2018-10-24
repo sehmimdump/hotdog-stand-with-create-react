@@ -58,7 +58,7 @@ class LandingPage extends React.Component {
 
             <div className="body">
               <a href="#"className="body-header">
-                THE RESTURENT
+               THE RESTAURANT
               </a>
 
                 <div className="body-sub-header">
